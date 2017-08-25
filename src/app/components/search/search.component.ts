@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
     templateUrl: './search.component.html'
 })
 export class SearchComponent {
-  
+    searchStr:any;
+
+    searchMusic(){
+     console.log(this.searchStr);   
+    }
 }
