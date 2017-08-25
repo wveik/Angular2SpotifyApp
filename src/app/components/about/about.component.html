@@ -1,3 +1,11 @@
-<div *ngIf="artist">
-    {{artist.name}}
+<div class="row" *ngIf="artist">
+    
+    <div class="card col-lg-12" style="width: 20rem;">
+        
+        <div class="card-body">
+            <h4 class="card-title">{{artist.name}}</h4>
+            <p class="card-text">mbid: {{artist.mbid}}</p>
+            <a routerLink="/" class="btn btn-primary">Back</a>
+        </div>
+    </div>
 </div>

@@ -13,7 +13,7 @@
             <h4 class="card-title">{{album.name}}</h4>
             <p class="card-text">playcount: {{album.playcount}}</p>
             <a href="{{album.url}}" target="_blank" class="btn btn-primary">Ссылка на музыку</a>
-            <a (click)="this._audioscrobbler.artist=album.artist" href="/about" target="_blank" class="btn btn-default">Артист</a>
+            <a (click)="myClick(album)" class="btn btn-default">Артист</a>
         </div>
     </div>
 </div>
