@@ -6,3 +6,14 @@
         <input (keyup)="searchMusic()" [(ngModel)]="searchStr" name="searchStr" type="text" class="form-control" placeholder="Поиск артиста...">
     </div>
 </form>
+<div class="row marketing">
+    <div class="card col-lg-4" style="width: 20rem;" *ngFor="let album of albums">
+        <img class="card-img-top" src='{{getImage(album)}}' alt="Card image cap">
+        <div class="card-body">
+            <h4 class="card-title">{{album.name}}</h4>
+            <p class="card-text">playcount: {{album.playcount}}</p>
+            <a href="{{album.url}}" target="_blank" class="btn btn-primary">Ссылка на музыку</a>
+            <a (click)="this._audioscrobbler.artist=album.artist" href="/about" target="_blank" class="btn btn-default">Артист</a>
+        </div>
+    </div>
+</div>

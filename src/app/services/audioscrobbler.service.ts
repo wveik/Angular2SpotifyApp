@@ -5,6 +5,9 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class AudioscrobblerService {
+    
+    public artist:any = null;
+    
     private searchUrl: string;
     private YOUR_API_KEY: string = "8ea0be38326c1275db95968ab677cfb6";
 
