@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AudioscrobblerService } from '../../services/audioscrobbler.service';
 
 @Component({
     moduleId: module.id,
@@ -6,9 +7,15 @@ import { Component } from '@angular/core';
     templateUrl: './search.component.html'
 })
 export class SearchComponent {
-    searchStr:any;
+    searchStr:string;
+
+    constructor(private _audioscrobbler:AudioscrobblerService){
+        
+    }
 
     searchMusic(){
-     console.log(this.searchStr);   
+        this._audioscrobbler.searchMusic(this.searchStr).subscribe(response => {
+            console.log(response);
+        });
     }
 }
