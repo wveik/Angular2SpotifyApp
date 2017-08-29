@@ -38,6 +38,6 @@ export class SearchComponent {
     myClick(album: any){
         console.log(album);
         this._audioscrobbler.artist = album.artist;
-        this._router.navigate(['about']);
+        this._router.navigate(['artist']);
     }
 }
