@@ -7,7 +7,8 @@ import { AudioscrobblerService } from '../../services/audioscrobbler.service';
     templateUrl: './about.component.html'
 })
 export class AboutComponent {    
+    about_us:string;
     constructor(private _audioscrobbler:AudioscrobblerService){
-
+        this.about_us ="лучшая компания на свете";
     }
 }
